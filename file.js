@@ -51,9 +51,3 @@ class MinHeapPQ {
     }
 }
 
-// Example Usage:
-const pq = new MinHeapPQ();
-pq.insert(10);
-pq.insert(5);
-pq.insert(20);
-console.log(pq.extractMin()); // 5
