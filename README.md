@@ -1,1 +1,7 @@
-# -implementation-variations-and-trade-offs
+To help you document your data structure implementations, here is a professional README.md template tailored for your project. You can save this in the root of your project folder.Data Structure ImplementationsThis project contains implementations of fundamental data structures in JavaScript, designed to demonstrate trade-offs in performance and memory management.Table of ContentsOverviewData Structures IncludedImplementation DetailsUsageOverviewThis project serves as a practice module for comparing:Queues: Array-based (fixed-size) vs. Linked List-based (dynamic).Priority Queues: Min-Heap (efficient) vs. Ordered Array (simple).Data Structures Included1. Queue VariationsArrayQueue: Uses a fixed-size array with circular indexing to optimize space.LinkedListQueue: Uses a singly linked list to allow dynamic growth, ensuring $O(1)$ enqueue and dequeue operations.2. Priority Queue VariationsMinHeapPQ: Uses a binary heap to maintain elements. Provides $O(\log n)$ insertion and extraction.OrderedArrayPQ: Maintains a sorted array. Provides $O(1)$ peek, but $O(n)$ insertion due to the need to maintain order.Implementation DetailsData StructureOperationsTime Complexity (Avg)Queue (LL)Enqueue / Dequeue$O(1)$Queue (Array)Enqueue / Dequeue$O(1)$PQ (Min-Heap)Insert / ExtractMin$O(\log n)$PQ (Ordered Array)Insert$O(n)$UsageSimply import the classes into your JavaScript environment:JavaScript// Example: Using the Min-Heap Priority Queue
+const { MinHeapPQ } = require('./priorityQueues');
+
+const pq = new MinHeapPQ();
+pq.insert(15);
+pq.insert(5);
+console.log(pq.extractMin()); // Output: 5
